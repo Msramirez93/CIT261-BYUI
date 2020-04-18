@@ -1,0 +1,774 @@
+
+body {
+    margin-left: 100px;
+    font-family: "Times New Roman", serif;
+    
+}
+
+
+button{
+    border-radius: 6px;
+    border-color: #0047b3;
+    padding: 10px 10px;
+    font-size: 14px;
+    margin: 4px 2px;
+    background-color: #0052cc;
+    transition-duration: 0.4s;
+    cursor: pointer;
+     color: #cccccc;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #3399ff;
+    color: white;
+}
+#zipCodeInput{
+    margin-bottom: 50px;
+}
+
+#zipCodeInput table {
+        
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+#zipCodeInput th{
+    border: none;
+}
+#zipCodeInput td{
+    border: none;
+}
+
+input{
+    width: 100px;
+    text-align:center;
+    padding: 10px 10px;
+    font-size: 16px;
+}
+
+#showText, #hideText{
+    width: 10em;  height: 2em;
+}
+
+
+   .forecast {
+        display: inline;
+       
+    }
+
+#title1 {
+    
+    background-color: #0047b3;
+    padding:.5em 0;
+    margin: 0;
+    color: white;
+    width: 100%;
+    max-width: 1000px;
+    min-width: 600px;
+}
+
+h2 {
+    
+    background-color: #0047b3;
+    padding:.5em 0;
+    margin: 0;
+    color: white;
+    width: 100%;
+    max-width: 1000px;
+    min-width: 600px;
+}
+section table{ 
+    border-collapse: collapse;
+    width:100%;
+    max-width: 1000px;
+    min-width: 600px;
+    }
+section table, th, td {
+        border: 1px solid black;
+        text-align: center;
+        vertical-align: middle;
+    
+    }
+section th, td {
+        padding: 15px;
+    }
+
+
+
+.forecast >h3 {
+            
+    display: inline-grid;
+    background-color: #0047b3;
+    padding: .5em 0;
+    margin: 0;
+    color: white;
+    width: 100%;
+    margin-top: 50px;
+    max-width: 1000px;
+    min-width: 600px;
+    }
+    
+#title1, #cityName{
+   padding-left: .5em; 
+}
+
+
+.masonry-layout2 {
+  column-count: 3;
+  column-gap: 0;
+    max-width: 1000px;
+    min-width: 600px;
+}
+.masonry-layout__panel2 {
+  break-inside: avoid;
+  padding: 5px;
+    
+}
+
+
+
+#masonry-layout_first {
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    min-height: 1px;
+    background: #bdc0c2;
+    height: auto;
+    transition: all .5s linear;
+
+}
+#masonry-layout_first:hover{
+    background: #ffffff;
+    box-shadow: 5px 10px;    
+}
+
+
+#masonry-layout_others {
+   display: flex;
+   flex-direction: column;
+   flex:1;
+   min-height: 1px;
+   background: #b9bbbd;
+   min-width: 200px;
+   transition: all .5s linear;
+
+}
+
+#masonry-layout_others:hover{
+    background: #ffffff;
+    box-shadow: 5px 10px;
+    
+}
+.masonry-layout_currentTitle {
+  break-inside: avoid;
+  padding: 5px 0 0 5px;
+   height: 50px;
+    
+}
+
+.masonry-layout_image {
+
+
+    height: auto;
+    transition: all .5s linear;
+}
+.masonry-layout_image :hover{
+    height: 200px;
+   
+}
+
+.masonry-layout_image > img {
+  break-inside: avoid;
+  padding: 0 0 0 25px;
+  height: 150px;
+  transition: all .5s linear;
+   
+}
+.masonry-layout_currentTemp {
+  break-inside: avoid;
+  padding: 0 0 45px 20px;
+    height: 60px;
+    font-size: 45px;
+     
+}
+
+.masonry-layout_sky {
+  break-inside: avoid;
+  padding: 0 0 40px 20px;
+    height: 60px;
+   
+    
+}
+
+.masonry-layout__panel {
+  break-inside: avoid;
+  padding: 5px;
+}
+.masonry-layout__panel-content {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#forecastTable{
+    background: #f2f4f7;    
+}
+
+#forecastTable th {
+    height: auto;
+    transition: all 2s linear;
+}
+
+#forecastTable th:hover{
+    background: gray;
+ 
+}
+
+#forecastTable td{
+    height: auto;
+    transition: all 2s linear;
+}
+
+#forecastTable td:hover{
+    background: gray;
+ 
+}
+#sunImage{
+		animation: rotation 15s infinite linear;
+    width: 250px;
+}
+
+@keyframes rotation {
+		from {
+				transform: rotate(0deg);
+		}
+		to {
+				transform: rotate(359deg);
+		}
+}
+
+#dayHeader{
+   
+    
+  background-color: #4d85ff;
+    
+}
+
+#nightHeader{
+ background-color: #0d0d0d;
+    
+}
+#snowHeader{
+    
+    height: 250px;
+
+  background-color: #b3c6ff;
+    
+}
+
+#rainHeader{
+ background-color: #002db3;
+    height: 250px;
+
+}
+
+
+#cloud1 {
+    position: absolute;
+    transform: translateX(-40vw);
+    top: 220px;
+    animation: move 25s linear 2s infinite;
+    width: 100px;
+}
+
+
+#cloud2 {
+  position: absolute;
+  transform: translateX(-40vw);
+  top: 355px;
+  animation: move 14s linear 2s infinite;
+  width: 100px;
+}
+
+#cloud3  {
+  top: 390px;
+  transform: translateX(-40vw);
+  position: absolute;
+  animation: move 18s linear 1s infinite;
+  width: 100px;
+}
+
+#cloud4  {
+  top: 290px;
+  transform: translateX(-40vw);
+  position: absolute;
+  animation: move 22s linear 1s infinite;
+  width: 100px;
+}
+
+
+@-webkit-keyframes move {
+  from {
+    transform: translateX(-70vw);
+  }
+  to {
+    transform: translateX(56vw);
+  }
+}
+
+#nightHeader{
+   
+}
+
+#moonImage{
+
+    width: 250px;
+}
+
+#star1 {
+    
+    position: absolute;
+    right: 35vw;
+    top: 20px;
+    width: 25px;
+    animation: flash 1s infinite;
+    animation-delay: .1s;
+    
+}
+
+#star2 {
+  position: absolute;
+  right:40vw;
+  top: 155px;
+  width: 25px;
+    animation: flash 1s infinite;
+    animation-delay: .2s;
+}
+
+#star3  {
+  top: 30px;
+  right:10vw;
+  position: absolute;
+    animation: flash 1s infinite;
+   animation-delay: .8s;
+
+  width: 25px;
+}
+#star4  {
+  top: 200px;
+  right:15vw;
+  position: absolute;
+    animation: flash 1s infinite;
+animation-delay: .6s; 
+  width: 25px;
+}
+#star5  {
+  top: 110px;
+  right:25vw;
+  position: absolute;
+animation: flash 1s infinite;
+  width: 25px;
+    animation-delay: .5s;
+}
+#star6  {
+  top: 70px;
+  right:50vw;
+  position: absolute;
+    animation: flash 1s infinite;
+animation-delay: .4s;
+  width: 25px;
+}
+
+#star7  {
+  top: 190px;
+  right:55vw;
+  position: absolute;
+    animation: flash 1s infinite;
+animation-delay: .7s;
+  width: 25px;
+}
+
+#star8  {
+    top: 30px;
+    right:60vw;
+    position: absolute;
+    animation: flash 1s infinite;
+    width: 25px;
+     animation-delay: .3s; 
+}
+
+@-webkit-keyframes flash {
+  from {
+    transform: scale(1,1);
+  }
+  to {
+     transform: scale(0,0);
+  }
+}
+
+
+
+
+#snoflake1 {
+    
+    position: absolute;
+    right: 35vw;
+    top: 490px;
+    width: 25px;
+    animation: snowing2 12s infinite linear;  
+    animation-delay: .1s;
+    
+}
+
+
+
+#snoflake2 {
+  position: absolute;
+  right:45vw;
+  top: 490px;
+  width: 25px;
+    animation: snowing 10s infinite linear; 
+    animation-delay: .3s;
+}
+
+#snoflake3  {
+  top: 490px;
+  right:10vw;
+  position: absolute;
+    animation: snowing2 12s infinite linear; 
+   animation-delay: .5s;
+
+  width: 25px;
+}
+#snoflake4  {
+  top: 490px;
+  right:18vw;
+  position: absolute;
+   animation: snowing2 10s infinite linear; 
+animation-delay: .7s; 
+  width: 25px;
+}
+#snoflake5  {
+  top: 490px;
+  right:25vw;
+  position: absolute;
+animation: snowing 10s infinite linear; 
+  width: 25px;
+    animation-delay: .9s;
+}
+#snoflake6  {
+  top: 490px;
+  right:50vw;
+  position: absolute;
+    animation: snowing 12s infinite linear; 
+animation-delay: .11s;
+  width: 25px;
+}
+
+#snoflake7  {
+  top: 490px;
+  right:65vw;
+  position: absolute;
+    animation: snowing2 10s infinite linear; 
+animation-delay: .13s;
+  width: 25px;
+}
+
+#snoflake8  {
+    top: 490px;
+    right:60vw;
+    position: absolute;
+    animation: snowing2 12s infinite linear; 
+    width: 25px;
+     animation-delay: .15s; 
+}
+
+#snoflake9  {
+  top: 490px;
+  right:2vw;
+  position: absolute;
+animation: snowing 10s infinite linear; 
+  width: 25px;
+    animation-delay: .19s;
+}
+#snoflake10  {
+  top: 490px;
+  right:80vw;
+  position: absolute;
+    animation: snowing2 10s infinite linear; 
+animation-delay: .21s;
+  width: 25px;
+}
+
+#snoflake11  {
+  top: 490px;
+  right:75vw;
+  position: absolute;
+    animation: snowing 12s infinite linear; 
+animation-delay: .23s;
+  width: 25px;
+}
+
+#snoflake12  {
+    top: 490px;
+    right:60vw;
+    position: absolute;
+    animation: snowing2 12s infinite linear; 
+    width: 25px;
+    animation-delay: 2s; 
+}
+
+@-webkit-keyframes snowing {
+0% {
+opacity: 1;
+-webkit-transform: translate(0, 0px) rotateZ(0deg);
+}
+
+25% {
+opacity: 1;
+-webkit-transform: translate(15px, 100px) rotateZ(90deg);
+}
+    
+50% {
+opacity: 1;
+-webkit-transform: translate(-15px, 150px) rotateZ(150deg);
+}
+    
+75% {
+opacity: 1;
+-webkit-transform: translate(15px, 200px) rotateZ(270deg);
+}
+100% {
+opacity: 0;
+-webkit-transform: translate(-15px, 240px) rotateZ(360deg);
+}
+}
+
+
+@-webkit-keyframes snowing2 {
+0% {
+opacity: 1;
+-webkit-transform: translate(0, 0px) rotateZ(0deg);
+}
+
+25% {
+opacity: 1;
+-webkit-transform: translate(-15px, 100px) rotateZ(90deg);
+}
+    
+50% {
+opacity: 1;
+-webkit-transform: translate(15px, 150px) rotateZ(150deg);
+}
+    
+75% {
+opacity: 1;
+-webkit-transform: translate(-15px, 200px) rotateZ(270deg);
+}
+100% {
+opacity: 0;
+-webkit-transform: translate(15px, 240px) rotateZ(360deg);
+}
+}
+
+
+
+
+#raindrop1 {
+    
+    position: absolute;
+    right: 5vw;
+    top: 740px;
+    width: 25px;
+    animation: rain 2s infinite linear;  
+    animation-delay: .1s;
+    
+}
+
+
+
+#raindrop2  {
+  position: absolute;
+  right:15vw;
+ top: 740px;
+  width: 25px;
+    animation: rain 2s infinite linear; 
+    animation-delay: .3s;
+}
+
+#raindrop3  {
+  top: 740px;
+  right:25vw;
+  position: absolute;
+    animation: rain 2s infinite linear; 
+   animation-delay: .5s;
+
+  width: 25px;
+}
+#raindrop4  {
+ top: 740px;
+  right:30vw;
+  position: absolute;
+   animation: rain 2s infinite linear; 
+animation-delay: .7s; 
+  width: 25px;
+}
+#raindrop5  {
+  top: 740px;
+  right:35vw;
+  position: absolute;
+animation: rain 2s infinite linear; 
+  width: 25px;
+    animation-delay: .9s;
+}
+#raindrop6  {
+  top: 740px;
+  right:40vw;
+  position: absolute;
+    animation: rain 2s infinite linear; 
+animation-delay: .11s;
+  width: 25px;
+}
+
+#raindrop7  {
+  top: 740px;
+  right:45vw;
+  position: absolute;
+    animation: rain 2s infinite linear; 
+animation-delay: .13s;
+  width: 25px;
+}
+
+#raindrop8  {
+    top: 740px;
+    right:50vw;
+    position: absolute;
+    animation: rain 2s infinite linear; 
+    width: 25px;
+     animation-delay: .15s; 
+}
+
+#raindrop9  {
+  top: 740px;
+  right:55vw;
+  position: absolute;
+animation: rain 2s infinite linear; 
+  width: 25px;
+    animation-delay: .19s;
+}
+#raindrop10  {
+  top: 740px;
+  right:60vw;
+  position: absolute;
+    animation: rain 2s infinite linear; 
+animation-delay: .21s;
+  width: 25px;
+}
+
+#raindrop11  {
+  top: 740px;
+  right:65vw;
+  position: absolute;
+    animation: rain 2s infinite linear; 
+animation-delay: .23s;
+  width: 25px;
+}
+
+#raindrop12  {
+    top: 740px;
+    right:70vw;
+    position: absolute;
+    animation: rain 2s infinite linear; 
+    width: 25px;
+    animation-delay: 2s; 
+}
+
+#raindrop13  {
+ top: 740px;
+  right:75vw;
+  position: absolute;
+    animation: rain 2s infinite linear; 
+   animation-delay: .5s;
+
+  width: 25px;
+}
+#raindrop14  {
+ top: 740px;
+  right:80vw;
+  position: absolute;
+   animation: rain 2s infinite linear; 
+animation-delay: .7s; 
+  width: 25px;
+}
+#raindrop15  {
+  top: 740px;
+  right:85vw;
+  position: absolute;
+animation: rain 2s infinite linear; 
+  width: 25px;
+    animation-delay: .9s;
+}
+#raindrop16  {
+  top: 740px;
+  right:90vw;
+  position: absolute;
+    animation: rain 2s infinite linear; 
+animation-delay: .11s;
+  width: 25px;
+}
+
+#raindrop17  {
+ top: 740px;
+  right:8vw;
+  position: absolute;
+    animation: rain 2s infinite linear; 
+animation-delay: .13s;
+  width: 25px;
+}
+
+#raindrop18  {
+   top: 740px;
+    right:10vw;
+    position: absolute;
+    animation: rain 2s infinite linear; 
+    width: 25px;
+     animation-delay: .15s; 
+}
+
+#raindrop19  {
+  top: 740px;
+  right:2vw;
+  position: absolute;
+animation: rain 2s infinite linear; 
+  width: 25px;
+    animation-delay: .19s;
+}
+#raindrop20  {
+  top: 740px;
+  right:80vw;
+  position: absolute;
+    animation: rain 2s infinite linear; 
+animation-delay: .21s;
+  width: 25px;
+}
+
+
+@-webkit-keyframes rain {
+0% {
+opacity: 1;
+-webkit-transform: translate(0, 0px) ;
+}
+
+ 
+50% {
+opacity: 1;
+-webkit-transform: translate(0px, 150px);
+}
+    
+
+100% {
+opacity: 0;
+-webkit-transform: translate(0px, 240px);
+}
+}
+

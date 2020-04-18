@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">  
+        <title> Weather Page</title>
+        <meta name="author" content="Elias D Ramirez">
+        <meta name="description" content="Animation Page">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="script/animation.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles/animation.css">
+    </head>
+    <body onload="start()"> 
+        <h2>Places I want to Visit by 2020</h2>
+        <div class="slideshowContainer">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="images/italy.jpg" style="width:100%">
+                <div class="text">Italy</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="images/greece.jpg" style="width:100%">
+                <div class="text">Greece</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="images/japan.jpg" style="width:100%">
+                <div class="text">Japan</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="images/portugal.jpg" style="width:100%">
+                <div class="text">Portugal</div>
+            </div>      
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="images/thailand.jpg" style="width:100%">
+                <div class="text">Thailand</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <h2>Places I visited in 2018</h2>
+        <div class="row">
+            <div class="container1">
+                <img src="images/france.jpg" style="max-width:100%;cursor:pointer"
+	               onclick="onClick(this)" class="modal-hover-opacity">
+                <div class="rowText">France</div>
+            </div>
+            <div class="container1">
+                <img src="images/germany.jpg" style="max-width:100%;cursor:pointer" 
+                     onclick="onClick(this)" class="modal-hover-opacity">
+                <div class="rowText">Germany</div>
+            </div>
+            <div class="container1">
+                <img src="images/uk.jpg" style="max-width:100%;cursor:pointer" 
+                     onclick="onClick(this)" class="modal-hover-opacity">
+                <div class="rowText">UK</div>
+            </div>
+            <div class="container1">
+                <img src="images/spain.jpg" style="max-width:100%;cursor:pointer" onclick="onClick(this)" class="modal-hover-opacity">
+                <div class="rowText">Spain</div>
+            </div>
+        </div>
+        <div id="modal01" class="modal" onclick="this.style.display='none'">
+            <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <div class="modal-content">
+                <img id="img01" style="max-width:100%">
+            </div>
+        </div>
+         <footer>
+            <p>Page created by Elias Ramirez for CIT 261</p>
+                <input type="button" value="Show Resources" id="showText" onclick="showResources()">
+                <input type="button" value="Hide Resources" id="hideText" onclick="hideResources()">
+                <div id="resources">
+                <h3>Links to resources below:</h3>
+                <ul>
+                    <li>    <a href="https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal">Intro to Modal</a> </li>
+                    <li>  <a href="https://www.w3schools.com/howto/howto_css_modal_images.asp">Image Modal</a> </li>
+                    <li>    <a href="https://codepen.io/r3dg3cko/pen/ZLryQG"> Multti Image Modal</a> </li>
+                    <li>    <a href="https://www.w3schools.com/howto/howto_js_slideshow.asp">How to Slideshow</a> </li>
+                </ul>
+                    </div>
+            </footer>
+   </body>
+</html>

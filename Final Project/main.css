@@ -1,0 +1,343 @@
+/* This main css file contains the default rules and is geared toward the small/phone view */
+
+* { box-sizing: border-box;}  /* This wildcard applies to all elements ensuring a box layout model */
+
+body {
+    font-size: 1em;
+    font-family: arvo, helvetica, sans-serif;
+    color: black;
+ 
+ }
+
+header {
+    font-family: helvetica, sans-serif;
+    padding: 1em 0.5em 0em 0.5em;
+
+    
+}
+header h1 {
+    display: inline;
+    font-size: 3.2em;
+    color: #4040a0;
+}
+header img {
+    float: left;
+    padding: .5em;
+}
+.subheading {
+    text-align: center;
+    font-size: .75em;
+    padding-bottom: 1em;
+    color: black;
+}
+
+.nav ul{
+        display: inline
+    }
+
+.hamburger {
+    display: block;
+    position: absolute;
+    top: 2.0rem;
+    right: 1.25rem; 
+}
+
+
+main h2 {
+    width: 100%;
+    color: black;
+    text-align: center;
+}
+
+main h3{
+    
+    text-align: center;
+}
+picture { 
+    margin: 0 0 0 0; 
+    width:100%; 
+}
+
+main picture img{ 
+    width: 100%;
+}
+
+.navigation { 
+    list-style: none; 
+}
+.navigation li { 
+    display: none;
+} 
+.navigation.responsive { 
+    position: relative; 
+}
+.navigation.responsive li { 
+    align-items: center;
+    justify-content: center;
+    background-color: #204080;
+    display: flex;	
+    width: 100%; 
+    margin: 1px 0;
+}
+.navigation.responsive li a {
+    padding: 2rem; 	
+    display: flex; 
+    text-decoration:none; 
+    color: white;
+}
+.navigation.responsive li a:hover { 
+    background-color: #c0e0f0; 
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+
+.grid {
+    border: 2px; 
+    border-radius: 5px;
+    padding: 1em;
+  
+}
+
+.grid > div {
+  border: 2px;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.grid img{
+    
+    width: 100%;
+}
+
+.grid img:hover{
+    box-shadow: 5px 5px 10px gray;
+}
+
+.description {
+    font-size: .75em;
+    text-align: center;
+}
+  
+section > h3 {
+    display: none;
+}
+.highlow {
+    display: flex;
+    justify-content: space-around;
+     
+}
+.current{
+    display: flex;
+   justify-content: space-around;
+    }
+
+.current h3 {
+      
+vertical-align: middle;
+   
+}
+
+.conditions {   
+   text-align: center;}
+      
+
+section.forecast {
+    display: none;
+    }
+.forecast h2 {
+    background-color: #4040a0;
+    padding: .5em;
+    margin: 0;
+    color: white;
+    width: 100%;
+}
+table{
+        border-collapse: collapse;
+        width: 100%;
+    }
+table, th, td {
+        border: 1px solid black;
+        text-align: center;
+        vertical-align: middle;
+    }
+th, td {
+        padding: 15px;
+    }
+
+article {
+    
+
+    padding-bottom: .5em;
+}
+article p {
+
+     margin: .5em .5em .5em .5em;
+    
+}
+article p.town-article img {  /* This structure refers to img elements that are the posterity of paragraph elements within artcle elements */
+    margin: 1em 1.5em 1em 1em;
+    width: 96%;
+    width: 100%;  
+    padding: 1em;
+}
+
+
+/**********************************************
+CSS for Storm Center
+***********************************************/
+form {
+    margin: 1em 3%;
+}
+
+fieldset{
+    background-color: #c0e0f0;
+    border-radius: .8em;
+    margin: 1.5em 0;
+    border: #0040c0 solid 2px;
+    width: 100%;
+}
+
+legend{
+    color: white;
+    margin-left: 6%;
+    padding: .5em;
+    border: #0020c0 solid 1px;
+    background-color: #204080;
+    border-radius: .4em;
+
+}
+
+label{
+    display: block;
+    margin: .5em;
+}
+
+label span{
+    display: block;
+    font-size: .8em;
+    color: Black;
+    padding-top: .9em;
+    padding-bottom: .2em;
+}
+
+input.submitButton{
+    -webkit-appearance: none;
+    border: solid 1px #111;
+    border-radius: 4px;
+    width: 50%;
+    margin: .5em 0;
+    font-size: 1em;
+    color: white;
+    padding: .6em;
+    background-color: #204080;
+    box-shadow: 4px 4px 10px #666;
+    
+}
+
+.radioOptions{
+    margin: .5em;
+    font-size: .8em;
+    color: Black;
+    padding-top: .9em;
+    padding-bottom: .2em;
+}
+
+
+.thankYou {
+    width: 100%;
+    color: black;
+    text-align: center;
+}
+
+.thankYou > p{
+    width: 100%;
+    color: black;
+    text-align: center;
+}
+
+.thankYou img{
+    
+    padding: .5em;
+    margin: .5em;
+    
+    
+}
+
+/*****************************************************************
+CSS for Index Page
+*****************************************************************/
+
+
+
+.welcomeHeader > h1 {
+    font-size: 2rem;
+    text-align: center;
+    max-width: 100%;
+    padding-top: .5em;
+    
+}
+
+.welcomeContent > p {
+ text-align: justify;  
+    line-height: 150%;
+    padding: 1em 3em 1em 3em;
+}
+
+.townInfo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+}
+
+
+.townInfo h2 {
+    color: #4040a0;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+padding: 0em 0em 0em 0em;
+    
+}
+
+footer aside {
+    margin-top: 0;
+    padding: 1.5em;
+    background-color: #c0e0f0;
+    text-align: center;
+    line-height: 150%;
+    
+    
+}
+
+footer>p {
+        
+    margin-top: 0;
+    padding: 1em;
+    background: #204080;
+    color: white;
+    text-align: center;
+    
+
+} /* This structure refers to p elements that are direct children of the footer element */
+
+/* Other Class Selectors */

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-us">
+<head> 
+    <meta charset="utf-8">
+    <title> JavaScript Fluency</title>
+    <meta name="author" content="Elias D Ramirez">
+    <meta name="description" content="Compound Interest Calculator">
+    <link rel="stylesheet" type="text/css" href="styles/DOM_Calculator.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
+    <script src="scripts/DOM_Calculator.js"></script>
+  
+</head>
+    <body class="HolyGrail"> 
+        <header>    
+            <h1>Compound Interest Calculator</h1>   
+        </header>
+        <div class="HolyGrail-body">
+            <main  class="HolyGrail-content">         
+                <div id="information">
+                    <h2>What is 'Compound Interest'?</h2>
+                    <p id="explanation">Compound interest (or compounding interest) is interest calculated on the initial principal and... <button id="maniDOM" onclick="manipulateDOM()"> Learn more</button></p> </div>
+                
+         
+                <div id="videoSection">
+                    <p>Click on the video to learn more.</p>
+                    <iframe id="video" width="450" height="340" src="https://www.youtube.com/embed/jTW777ENc3c" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> </div>
+               
+                <div id="audioSection">
+                    <p> If you prefer to listen to this video, press play</p>
+                    <audio controls="controls">
+                        <source src="sounds/compound-interest-explained-in-one-minute.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                <div id="calculator">
+                    <h2>Calculate Compound Interest</h2>
+                    <p>Please complete the following</p>
+                       <div id="tableCal">
+                        <table>
+                            <thead>
+                                <tr>
+                                   <th colspan="4">Inputs</th>
+                                </tr>
+                            </thead>
+                            <tbody>  
+                                <tr>
+                                    <td>Initial Amount:</td>
+                                    <td class="dollarSign">$</td>  
+                                    <td><input type="number" id="currPrincipal" placeholder="1000.00" ></td>   
+                                </tr>
+                                <tr>
+                                    <td>Monthly Addition:</td>
+                                    <td class="dollarSign">$</td>   
+                                    <td><input type="number" id="monthlyAddition" placeholder="100.00" min="0" ></td>  
+                                </tr>
+                                <tr> 
+                                    <td >Years to grow: </td>
+                                    <td></td> 
+                                     <td><input type="number" id="yearsGrow" placeholder="25" required min="0"></td>
+                                </tr>
+                                <tr> 
+                                    <td>Interest rate:</td>
+                                    <td></td>   
+                                    <td><input type="number" id="interestRate" placeholder="5" required min="0"></td> 
+                                    <td>%</td>  
+                                </tr>
+                                <tr>
+                                    <td>Compound interest</td>
+                                    <td><input type="number" id="compoundTerms" min="0" placeholder="1" required ></td>  
+                                    <td>time(s) annually</td>  
+                                </tr>
+                                <tr>
+                                    <td> 
+                                        <button onclick="getInput()" id="result"> Calculate</button>
+                                    </td>
+                                </tr>
+                                <tr> 
+                                    <td id="resultPage" colspan="4">Result</td>
+                                </tr>
+                                <tr> 
+                                    <td>Future Value: </td>
+                                    <td></td> 
+                                    <td id="futureMoneyResult"> </td>         
+                                </tr>
+                            </tbody> 
+                            <tfoot>
+                                <td><button onclick="saveState()" id="saving">Save All</button></td>
+                                <td><button onclick="loadState()" id="loading">Load Input</button></td>
+                                <td> 
+                                    <button onclick="loadStateAndResult()" id="loading">Load Result</button>
+                                </td>
+                                <td id="loadingResult"> </td>
+                            </tfoot>
+                           </table>
+                    </div>
+                </div> 
+                <div id="evaluation">
+                    <div id="graphicAnalysis">
+                        <h2>How Does it work?</h2>
+                        <p id="graphicInfo">A graphic describind the makeup of your future value is shown below. <br>Pay atention to the amount generated by compunding alone</p>
+                        <canvas id="canvasId"></canvas>
+                        <p id="analysis"> </p>
+                    </div>
+                </div>
+        </main>
+ </div>
+        <footer>
+            <aside>
+                <strong>Website created and designed by Elias Ramirez for CIT261</strong><br>
+            </aside>
+        </footer> 
+       
+        
+    </body>
+</html>

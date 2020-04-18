@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en-us">
+<head> 
+    <meta charset="utf-8">
+    <title> Weather Page</title>
+    <meta name="author" content="Elias D Ramirez">
+    <meta name="description" content="Weather information based on Zip Code">
+    <script src="scripts/weatherApp.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/weather_App.css">
+  
+</head>
+    <body onload="onloadEvents()">
+        <header>
+            <div id="dayHeader">
+                <img id="sunImage" src="images/sun.png">
+                <img id="cloud1" src="images/backgroundCloud.png">
+                <img id="cloud2" src="images/backgroundCloud.png"> 
+                <img id="cloud3" src="images/backgroundCloud2.png">
+                <img id="cloud4" src="images/backgroundCloud2.png">
+            </div>    
+            <div id="nightHeader">
+                <img id="moonImage" src="images/moonBackground.png">
+                <img id="star1" src="images/star.png">
+                 <img id="star2" src="images/star.png">
+                 <img id="star3" src="images/star.png">
+                 <img id="star4" src="images/star.png">
+                 <img id="star5" src="images/star.png">
+                 <img id="star6" src="images/star.png">
+                <img id="star7" src="images/star.png">
+                <img id="star8" src="images/star.png">
+            </div>
+                </header>
+        <div id="zipCodeInput">
+            <h2 id="title1">Please enter your Zip Code</h2>         
+            <div id="tableCal">
+                <table>
+                    <tbody>  
+                        <tr>                  
+                            <td><input type="number" id="zipCode" placeholder="77091" ></td>   
+                            <td> <button onclick="getResult()" >Go!</button></td>
+                            
+                            <td> <button onclick="saveResult()" >Save Session</button></td>
+                            
+                            <td> <button     onclick="loadLastSaved()" >Load Saved Session</button></td>                           
+                            <td> <button onclick="loadResult()">Load Last Session</button></td>
+           
+                        </tr>    
+                    </tbody> 
+                </table>
+            </div>
+           
+        </div>
+        <div id="forecastPanel">
+             <h2 id="cityName"></h2>
+        <div class="masonry-layout2">
+            <div class="masonry-layout__column2">
+                <div class="masonry-layout__panel2"> 
+                    <div class="masonry-layout">      
+                        <div id="masonry-layout_first">
+                            <div class="masonry-layout_currentTitle" >
+                                <p class="title">CURRENT 
+                                    WEATHER</p>  
+                            </div>
+                            <div class="masonry-layout_image">
+                                <p id="currentTemp"></p>
+                                <img id ="currentImage" src="images/Empty.png">
+                            </div>  
+                            <div class="masonry-layout_currentTemp"> 
+                                <p id="currWeather"></p>
+                            </div>
+                            <div class="masonry-layout_sky"> 
+                                <p id="skyCondition"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>            
+                <div class="masonry-layout__column2">
+                    <div class="masonry-layout__panel2"> 
+                        <div class="masonry-layout">
+                            <div id="masonry-layout_others">
+                            <div class="masonry-layout_currentTitle">
+                                <p class="title">TODAY</p>
+                                <p id="today"></p>
+                            </div>
+                            <div class="masonry-layout_image">
+                                <p id="currentTemp"></p>
+                                <img id="todayImage" src="images/Empty.png">
+                            </div>  
+                        
+                            <div class="masonry-layout_currentTemp"> 
+                                <p id="todayTemp"></p>
+                            </div>
+                            <div class="masonry-layout_sky"> 
+                                <p id ="todayMain"></p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="masonry-layout__column2">
+                    <div class="masonry-layout__panel2"> 
+                        <div class="masonry-layout">
+                            <div id="masonry-layout_others">
+                            <div class="masonry-layout_currentTitle">
+                                <p class="title">TOMORROW</p>
+                                <p id="tomorrow"></p>
+                            </div>
+                            <div class="masonry-layout_image">
+                                <p id="currentTemp"></p>
+                                <img id="tomorrowImage" src="images/Empty.png">
+                            </div>  
+                        
+                            <div class="masonry-layout_currentTemp"> 
+                                <p id="tomorrowTemp"></p>
+                            </div>
+                            <div class="masonry-layout_sky"> 
+                                <p id="tomorrowCondition"></p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+            
+        <section class="forecast">
+            <h3 id="forecastTitle">5 Day Forecast </h3>
+            <table id="forecastTable">
+                <thead>
+                    <tr>
+                        <th id="day1"></th>
+                        <th id="day2"></th>
+                        <th id="day3"></th>
+                        <th id="day4"></th>
+                        <th id="day5"></th>
+          
+                    </tr>
+                </thead>
+                <tbody>  
+                    <tr>
+                        <td id="tday1"></td>
+                        <td id="tday2"></td>
+                        <td id="tday3"></td>
+                        <td id="tday4"></td>
+                        <td id="tday5"></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+             </div> 
+             <footer>
+                
+                 <button onclick="showDayHeader()">Force Day Background </button>
+                 
+                 <button onclick="showNightHeader()">Force Night Background </button>
+            <p>Page created by Elias Ramirez for CIT 261</p>
+            </footer>
+    
+    </body>
+     
+</html>

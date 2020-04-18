@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en-us">
+<head> 
+    <meta charset="utf-8">
+    
+    <title> JavaScript Fluency</title>
+    <meta name="author" content="Elias D Ramirez">
+    <meta name="description" content="Compound Interest Calculator">
+    <script src="scripts/events.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/events.css">
+  
+</head>
+    <body class="HolyGrail" onload="myFunction()"> 
+        <header>    
+            <h1>JavaScript Events</h1>   
+        </header>
+        <div class="HolyGrail-body">
+            <main class="HolyGrail-content">
+                <div id="EventHandlers">
+                    <h3>Event Handlers</h3>
+                    <p>JavaScript in the browser uses an event-driven programming model.</p>
+                    <p>Everything starts by following an event.</p>
+                    <p>Sometimes, events handlers are referred to as event listener, however some programmers see them as two different handlers:</p>
+                    <ol type="A">
+                        <li>Event Handler</li>
+                        <dd>A JavaScript function that runs when an     event fires.</dd>
+                        <li>Event Listener</li>
+                        <dd>A element that waits and "listen" for a given event to fire.</dd>
+                    </ol>
+                    <p>Examples of different event handlers are:</p>
+                    <ol type="1">
+                        <li>Inline Event Handlers</li>
+                        <dd><xmp><button onclick="document.getElementById('demo').
+          innerHTML=Date()">The time is?</button></xmp></dd>  
+                        <li>Dom On-Event Handlers</li>
+                        <dd><xmp><onload="myFunction()"></xmp></dd>
+                            <li>Event Listeners</li>
+                        <dd><xmp> window.addEventListener('load', () =>{ 
+                            //window loaded})</xmp></dd>
+                    </ol>
+                </div>
+                <div id="InlineHandlers">
+                    <h3>Inline Event Handlers</h3>    
+                    <img src="images/inlineEvent.png" alt="inline event example">
+              
+                    <p>Example Below:</p>
+                    <button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+                    <p id="demo"></p>
+                    
+                    <p><strong>Important: Inline Handlers are not in used anymore. Do not use them!</strong></p>
+                </div>
+                <div id="OnEventHandlers">
+                    <h3>Dom On-Event Handlers</h3>
+                    
+                    <p><strong>Syntax:</strong></p>
+                    <p>Using an HTML attribute named on{eventtype} on an element, for example:</p>
+                    <p><xmp><button onclick="return handleClick(event);"></button></xmp></p>
+                    <p>Or by setting the corresponding property from JavaScript, for example:</p>
+                     <p><xmp>document.getElementById("mybutton").onclick = function(event) { ... }</xmp></p>
+                   
+                    <h4>OnLoad Event</h4>
+                    <img src="images/onLoadEvent.png" alt="onload event example">  
+                    <p >Refresh page to see working example</p>    
+                    <h4>OnTouchStart Event </h4>
+                    <img src="images/onTouchStartEvent.png" alt="ontouchstart event example">
+                    <p>Example Below:</p>
+            
+                    <p ontouchstart="myFunction2()">Touch this paragraph to trigger a function that will write "Hello World".</p>
+
+                    <p><strong>Note:</strong> This example is for  touch devices only.</p>
+                    
+                    <p><strong>Update Nov 1: During our group meeting, our instructor explained that a good way to increase compatibility is using an event listner instead</strong></p>
+                    
+                    <p>Thus, an updated version below:</p>
+                    <img src="images/addEventListener_Updated.png" alt="Event Listener updated">
+                     <p id="myFunction2Updated">Touch this paragraph to trigger a function that will write "Hello World".</p>
+                    
+                    <script>
+                        // gets Element
+                        var z = document.getElementById("myFunction2Updated");
+                        // adds EventListener. The first one is for touch devices.
+                        // It uses the same function
+                        z.addEventListener("touchstart", myUpdatedFunction);
+                        //adds second event "Click". Uses the same function 
+                        // as both events display the same result
+                        z.addEventListener("click", myUpdatedFunction);
+
+                        function myUpdatedFunction() { document.getElementById("demo2Updated").innerHTML += "Hellow World"
+                        }
+                    </script>
+                    
+                    <p id="demo2Updated"></p>
+                </div>    
+                <div id="eventListener">
+                    <h3>Event Listeners</h3>   
+                    <img src="images/addEventListener.png" alt="Add Event Listener example">
+            
+                    <p>The latest addition to JavaScript event handlers are event listeners. An event listener watches for an event on an element. Instead of assigning the event directly to a property on the element, we will use the addEventListener() method to listen for the event.</p>
+                    <p><strong>Syntax:</strong></p>
+                    <p>element.addEventListener(event, function, useCapture)</p>
+                    <p>Example Below:</p>   
+                    <button id="myBtn">Try it</button>      
+                    <p id="demo3"></p>     
+                    <script>
+           
+                        // Function for AddEventListener Function
+                        var x = document.getElementById("myBtn");
+                        x.addEventListener("mouseover", myFirstFunction);
+                        x.addEventListener("click", mySecondFunction);
+                        x.addEventListener("mouseout", myThirdFunction);
+
+                        function myFirstFunction() {
+                            document.getElementById("demo3").innerHTML +=           "Moused over!<br>"
+                        }
+                        
+                        function mySecondFunction() {
+                            document.getElementById("demo3").innerHTML +=   "Clicked!<br>"
+                        }
+
+                        function myThirdFunction() {
+                            document.getElementById("demo3").innerHTML += "Moused out!<br>"
+                        }
+                    </script>      
+                </div>
+                 <div id="TransitionEvents">
+                    <h3>Transitions using Event Listeners</h3>
+                
+                    <img src="images/addEventListenerForTransition.png" alt="AddEventListener for Transition">
+            
+                    <p>Example Below:</p>
+            
+                    <p>Hover over the div element below, and wait for the transition effect to end.</p>
+
+                    <div id="myDIV"></div>
+
+                    <p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p> 
+            
+                    <script>
+
+                        // Standard syntax
+                        document.getElementById("myDIV").addEventListener("transitionend", myFunction5);
+
+                        function myFunction5() {
+                            this.innerHTML = "transitionend event occured - The     transition has completed";
+                            this.style.backgroundColor = "pink";
+                        }
+                    </script>
+                </div>          
+                
+                <div id="AnimationEvents">
+                    <h3>Animation using Event Listeners</h3>
+                
+                    <img src="images/addEventListenerForAnimation.png" alt="AddEventListener for Animations">
+                    <p>Example Below:</p>
+                    <p>Hover over the green square below, and wait for the animation effect to start and end.</p>
+                    <div id="animation"></div>
+                    <p id="resultAnimation"></p>
+                    <script>
+                        //Event listener will kick in once and event
+                        //ocurred in animation ID
+                        var y = document.getElementById("animation");
+                        //event listener will look for the start of the animation
+                        y.addEventListener("animationstart",animationFunctionStart);
+                       //event listener will look for the end of the animation              
+                        y.addEventListener("animationend",animationFunctionEnd);
+                       // function executed when animation starts
+                        function animationFunctionStart() {
+                           document.getElementById("resultAnimation").innerHTML += "Animation Started!<br>"
+                        }
+                        //function executed when animation ends
+                        function animationFunctionEnd() {
+                           document.getElementById("resultAnimation").innerHTML += "Animation Ended!<br>"
+                        }
+                     </script>
+                    
+                    
+                </div>          
+        </main>
+    <nav class="HolyGrail-nav"></nav>
+    <aside class="HolyGrail-ads"></aside>
+        </div>
+        <footer>
+              <p>Page created by Elias Ramirez for CIT 261</p>
+            <h3>Links to resources below:</h3>
+            <a href="https://philipwalton.github.io/solved-by-flexbox/demos/holy-grail/">CSS Layout</a> 
+            <a href="https://flaviocopes.com/javascript-events/">JavaScript Events</a> 
+            <a href="https://www.w3schools.com/css/css3_animations.asp">CSS3 Animations</a> 
+            <a href="https://www.w3schools.com/js/js_events.asp">JavaScript Events</a> 
+            <a href="https://www.w3schools.com/js/default.asp">JavaScript Examples</a> 
+        </footer>  
+    </body>
+</html>

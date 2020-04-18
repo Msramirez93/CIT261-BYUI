@@ -1,0 +1,33 @@
+@media only screen and (min-width: 64em) {
+  /* Only CSS rules that need to be changed to meet the layout needs from medium to large/wide go in here */
+    
+    body {
+        max-width: 75em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    main figure img{
+        width: 100%;
+        margin: -1.3em 0 2em 0;
+    }
+    
+    .grid {
+       
+        grid-template-columns: 1fr 1fr    1fr;
+        }
+    .current{}
+    .highlow{
+        display: inline-block;
+    }
+    .conditions{
+        display: inline-block;
+        float: right;
+    }
+  article p.town-article img { 
+      width: 29.333%;
+      margin: auto;
+    }
+
+}
+

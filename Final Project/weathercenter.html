@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <meta name="author" content="Elias D Ramirez">
+    <meta name="description" content="Local Weather infomration for residents of Franklin, Greenville and Springfield area.">
+    <!-- external style references in the proper cascading order -->    
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">  <!-- Google API font reference -->
+    <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize    useragent/browser defaults -->
+    <link href="styles/main.css" rel="stylesheet">    <!-- default styles - small/phone views -->
+    <link href="styles/medium.css" rel="stylesheet">  <!-- medium/tablet views --> 
+    <link href="styles/large.css" rel="stylesheet">   <!-- large/wide/desktop views --> 
+</head>
+
+<body>
+    <header>
+        <img src="images/Logo.jpg" alt="The site logo" width="150">
+        <h1>EL TIEMPO</h1>
+        <div class="subheading">Your Local Weather Website</div>
+        
+    </header>
+
+<nav>
+    
+        <ul id="mainmenu" class="navigation">
+            <li class="active"><a href="home.html">Home</a></li>
+            <li><a href="houston.html">Houston</a></li>
+            <li><a href="buenosaires.html">Buenos Aires</a></li>
+            <li><a href="rexburg.html">Rexburg</a></li>
+            <li><a href="weathercenter.html">Weather Center</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>	
+       
+    </nav>
+    <button class="hamburger" onclick="toggleHam()">&#9776;</button>
+    <main>
+
+      
+<h2>Report a Storm</h2>
+
+
+<form action="thanks.php" method="post" enctype="multipart/form-data" name="reportStorm" id="stormReporting">
+    <fieldset>
+        <legend><span>Personal Information</span></legend>
+        <label><span>Full Name:</span><input name="fullname" type="text" value="" placeholder="Full Name" pattern="[a-zA-Z -._]{5,99}" required></label>
+        <label><span>Email:</span><input name="email" type="email" value="" placeholder="someone@example.com" required></label>
+        <label><span>Phone Number:</span><input name="phone" type="tel" value="" placeholder="1234567890" pattern="[0-9]{10,20}" required></label>
+        <label><span>Zip Code:</span><input name="zipCode" type="number" value="" placeholder="Zip Code" required></label>
+    </fieldset>    
+    <fieldset>
+        <legend><span>Storm Report</span></legend>
+        <label><span>Storm Date:</span><input name="stormDate" type="date" value=""></label>
+        <label><span>Storm Type:</span></label>
+        <input name="stormType" type="text" list="storms" placeholder="Select Storm Type"> 
+        <datalist id="storms">
+            <option value="Flash Flood"></option>
+            <option value="Hail"></option>
+            <option value="Hurricane"></option>
+            <option value="Thunderstorm"></option>
+            <option value="Tornado"></option>
+        </datalist>
+        <label for="rating"><span>Storm Severity (1 to 10)</span></label>
+        <input type="range" id="rating" value="5" min="1" max="10" step="1" oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
+        <span id="ratingvalue">5</span><br>
+        <label><span>Storm Region:</span></label>
+        <select>
+            <option value="Select_Region" selected disabled>Select Region</option>
+            <option value="Franklin">Franklin</option>
+            <option value="Greenville">Greenville</option>
+            <option value="Springfield">Springfield</option>
+        </select>
+       
+        <label><span>User is in Danger?</span></label>
+        <div class="radioOptions">
+            <input type="radio" name="q1" value="Yes">Yes<br>
+            <input type="radio" name="q1" value="Maybe" checked>Maybe<br>
+            <input type="radio" name="q1" value="No">No<br>
+        </div>
+        <label><span>Additional Information:</span></label>
+        <textarea rows="4" cols="50"> 
+        </textarea>
+    </fieldset>   
+
+    <input type="submit" value="Submit Report" class="submitButton">
+    <input name="redirect" type="hidden" value="thanks.php">
+</form>
+           <footer>
+        <aside>
+            <strong>EL TIEMPO Weather</strong><br>
+            12345 Laurel Trails Dr. <br> Franklin, TX 77095 <br>
+            (999) 999 9999 <br>
+            contact@eltiempoweather.com
+        </aside>
+        <p class="footer-bar">&copy;2017 All Rights Reserved | El Tiempo | <?php
+            echo "";
+            $mydate=getdate(date("U"));
+            echo "$mydate[weekday], $mydate[month] $mydate[mday], $mydate[year]";
+            ?>
+  </footer>
+
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/currentdate.js"></script>
+    <script src="scripts/windchill.js"></script>
+    <script src="scripts/adjustRating.js"></script>
+    <script>
+        //remember to add an ID of "mainmenu" to the nav ul
+        var urlString = document.location.href;
+        var urlArray = urlString.split('/');
+        var pageHREF=urlArray[urlArray.length-1];
+        if (pageHREF !=="") {
+            var menu = document.querySelectorAll('ul#mainmenu li a');
+            var i;
+            //loop through all the menu items in the navigation
+            for(i=0; i<menu.length; i++) {
+                var currentURL=(menu[i].getAttribute("href"));
+                menu[i].parentNode.className=""; //turn off hilighting by default
+                if (currentURL===pageHREF) {
+                    menu[i].parentNode.className="active";	//turn on if a match
+                } // end if
+            } // end of the search for a match
+        } // end of if !==
+        </script>
+
+</body>
+
+
+
+</html>

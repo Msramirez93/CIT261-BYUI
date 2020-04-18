@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en-us">
+<head> 
+    <meta charset="utf-8">
+    
+    <title> Weather Page</title>
+    <meta name="author" content="Elias D Ramirez">
+    <meta name="description" content="Weather Page">
+    <script src="scripts/weather.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/weather.css">
+  
+</head>
+    <body class="HolyGrail"> 
+        <header>    
+            <h1>Weather Page</h1>   
+        </header>
+        <div class="HolyGrail-body">
+            <main class="HolyGrail-content">
+                <div id="houstonWeather">
+            <div id="calculator">
+                    <h3>Please enter your Zip Code</h3>
+                   
+                       <div id="tableCal">
+                        <table>
+                            <tbody>  
+                                <tr>
+                                    <td>Zip Code</td>
+                                    <td><input type="number" id="zipCode" placeholder="77091" ></td>   
+                                    <td> 
+                                        <button onclick="getResult()" >Go!</button> 
+                                       
+                                    </td>
+                                </tr>    
+                            </tbody> 
+                           </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="CityInfo">
+                    <H3 id="city"></H3>
+                    <p id="location"></p>
+                     <p id="sun"></p>
+                    <p id="currWeather"></p>
+
+                    <p id="wind"></p>
+                   
+                </div>
+            </main>
+          
+            <footer>
+                <p>Page created by Elias Ramirez for CIT 261</p>
+                <h3>Links to resources below:</h3>
+                <ul>
+                    <li>  <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> </li>
+                    <li>    <a href="https://medium.com/dailyjs/instantiation-patterns-in-javascript-8fdcf69e8f9b">Object Instantiation</a> </li>
+                    <li>    <a href="https://openweathermap.org/"> Openweathermap API</a> </li>
+                    <li>    <a href="https://stackoverflow.com/questions/39311589/parsing-a-json-file-subarray-or-inside-square-brackets-node-js/39311643">Parsing from insde a subarray</a> </li>
+                </ul>
+            </footer>
+        </div>
+    </body>
+</html>

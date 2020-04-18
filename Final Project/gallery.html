@@ -1,0 +1,83 @@
+
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Franklin Site</title>
+    <meta name="author" content="Elias D Ramirez">
+    <meta name="description" content="Local Weather infomration for residents of Franklin, Greenville and Springfield area.">
+    <!-- external style references in the proper cascading order -->    
+    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">  <!-- Google API font reference -->
+    <link href="styles/normalize.css" rel="stylesheet"> <!-- normalize    useragent/browser defaults -->
+    <link href="styles/main.css" rel="stylesheet">    <!-- default styles - small/phone views -->
+    <link href="styles/medium.css" rel="stylesheet">  <!-- medium/tablet views --> 
+    <link href="styles/large.css" rel="stylesheet">   <!-- large/wide/desktop views --> 
+</head>
+    
+<body>
+    <header>
+        <img src="images/Logo.jpg" alt="The site logo" width="150">
+        <h1>EL TIEMPO</h1>
+        <div class="subheading">Your Local Weather Website</div>
+        
+    </header>
+    <nav>
+            <ul id="mainmenu" class="navigation">
+            <li class="active"><a href="home.html">Home</a></li>
+            <li><a href="houston.html">Houston</a></li>
+            <li><a href="buenosaires.html">Buenos Aires</a></li>
+            <li><a href="rexburg.html">Rexburg</a></li>
+            <li><a href="weathercenter.html">Weather Center</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>	
+    </nav>
+    <button class="hamburger" onclick="toggleHam()">&#9776;</button>
+  
+        <h2>Gallery</h2>
+       
+
+    
+        <div class="grid">
+           <div class="one">
+               <img src="images/fall.jpg" alt="Fall in Franklin">
+               <p class="description"> Fall in Franklin</p>
+            </div>
+            <div class="two">
+                <img src="images/rain.jpg" alt="Rainy day in Springfield">
+                <p class="description"> Rainy day in Springfield</p>
+            </div>
+            <div class="three">
+                <img src="images/snow.jpg" alt="Snow in Greenville">
+                <p class="description"> Snow in Greenville</p>
+            </div>
+            <div class="four">
+                <img src="images/Spring.jpg" alt="Spring Day in Springfield">
+                <p class="description"> Spring Day in Springfield</p>
+            </div>
+            <div class="five">
+                <img src="images/tornado.jpg" alt="Tornado Close to Greenville">
+                <p class="description"> Tornado Close to Greenville</p>
+            </div>
+            <div class="six">
+            <img src="images/windy.jpg" alt="Windy Day in Franklin">
+            <p class="description"> Windy Day in Franklin</p>
+            </div>
+        </div>
+    
+    
+    <footer onload="currentdate()">
+        <aside>
+            <strong>EL TIEMPO Weather</strong><br>
+            12345 Laurel Trails Dr. <br> Franklin, TX 77095 <br>
+            (999) 999 9999 <br>
+            contact@eltiempoweather.com
+        </aside>
+        <p class="footer-bar">&copy;2017 All Rights Reserved | El Tiempo | <span id="DATE"></span></p>
+  </footer>
+
+  <script src="scripts/hamburger.js"></script>
+  <script src="scripts/currentdate.js"></script>
+
+</body>
+</html>

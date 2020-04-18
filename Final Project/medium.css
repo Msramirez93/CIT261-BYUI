@@ -1,0 +1,108 @@
+@media only screen and (min-width: 37.5em) {
+  /* Only CSS rules that need to be changed to meet the layout needs from small to medium go in here */
+
+
+    header h1 {
+        display: inline;
+        font-size: 4.2em;
+        color: #4040a0;
+    }
+    
+    .subheading {
+        text-align: left;
+        font-size: 1em;
+        padding-bottom: 1em;
+        color: black;
+    }
+    .hamburger{
+        display: none;
+    }
+    
+    .navigation li { 
+    display: inline;
+        
+    }
+    nav {    
+        background-color: #204080;
+        overflow: hidden;
+        font-size: .9em;
+        
+    }
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        
+    
+    }
+    nav ul li {
+        float: left;
+        
+    }
+    nav ul li a {
+        display: block;
+        text-align: center;
+        padding: 15px 20px;
+        color: white;
+        text-decoration: none;
+    }
+    nav ul li.active a {
+        background-color: #6060a0;
+    }
+    
+    nav ul li a:hover {
+        background-color: #c0e0f0;
+    }
+
+    main figure img { 
+        width: 62.666%;
+        height: 18em;
+        margin: .5em .5em 0 0;
+        float: left;
+    }
+    
+    section.forecast {
+        display: inline;
+    }
+
+.grid {
+  
+  grid-template-columns: 1fr 1fr;
+}
+    
+.caption {
+    font-size: .6em;
+    text-align: center;
+    }
+    .forecast >h3 {
+            
+        display: inline-grid;
+        background-color: #4040a0;
+        padding: .5em;
+        margin: 0;
+        color: white;
+        width: 100%;
+    }
+    
+    .current {
+        display: block;
+    }
+    
+    .current h3 {
+        text-align: center;
+    }
+    
+    .highlow {
+        display: block;
+        text-align: center
+    }
+    
+    article p.town-article img { 
+        width: 62.666%;
+        float:right; 
+        padding-left: .5em;
+    }  
+        
+}
+
+
